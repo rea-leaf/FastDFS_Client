@@ -4,7 +4,7 @@
 
     <groupId>com.github.tobato</groupId>
     <artifactId>fastdfs-client</artifactId>
-    <version>1.27.3-SNAPSHOT</version>
+    <version>1.28</version>
     <packaging>jar</packaging>
     <!-- x-SNAPSHOT -->
 
@@ -36,27 +36,24 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.0.RELEASE</version>
-        <relativePath/>
+        <version>3.1.8</version>
     </parent>
 
     <properties>
         <!-- commons utils -->
-        <commons-lang3.version>3.3.2</commons-lang3.version>
+        <commons-lang3.version>3.14.0</commons-lang3.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
-
-        <mockito.version>1.9.5</mockito.version>
         <hibernate-validator.version>6.0.8.Final</hibernate-validator.version>
 
         <!-- 软件发布版本 -->
-        <copyright.year>2016</copyright.year>
+        <copyright.year>2024</copyright.year>
 
         <!-- Plugin的属性定义 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
 
         <!-- 本地发布服务器 -->
-        <local.nexus>192.168.129.12:8081</local.nexus>
+      <!--  <local.nexus>192.168.129.12:8081</local.nexus>-->
 
     </properties>
 
@@ -83,7 +80,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.10.3</version>
+                        <version>3.6.3</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
@@ -134,7 +131,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>2.2.1</version>
+                        <version>3.3.0</version>
                         <executions>
                             <execution>
                                 <phase>package</phase>
@@ -230,7 +227,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -251,7 +252,7 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
-            <version>${mockito.version}</version>
+            <version>1.10.19</version>
             <scope>test</scope>
         </dependency>
 
